@@ -1,4 +1,6 @@
-fn = (name) ->
-  'hi ' + name
+r = require 'react'
 
-module.exports = fn;
+fac = r.createFactory
+el = r.createElement
+
+module.exports = el 'div', {}, "Hello"

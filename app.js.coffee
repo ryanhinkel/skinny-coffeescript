@@ -1,3 +1,6 @@
-fn = require "./components"
+render = require('react-dom').render
+app = require './components'
 
-document.write(fn('Ryan'));
+rootNode = document.getElementById 'app'
+
+render app, rootNode

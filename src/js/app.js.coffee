@@ -3,11 +3,11 @@ rDOM = require 'react-dom'
 app = require './components'
 store = require './store'
 
-# ui = f(store)
-rootApp = app(store)
+# gui = f(store)
+gui = app(store)
 
 # element = query(DOM)
-rootNode = document.getElementById 'app'
+element = document.getElementById 'app'
 
-# render ui into element
-rDOM.render rootApp, rootNode
+# render gui into element
+rDOM.render gui, element

@@ -4,13 +4,18 @@ app = require './components'
 
 el = r.createElement
 
-state =
+# store (db, state)
+store =
   person:
     firstName: 'Ryan',
     lastName: 'Hinkel',
     skills: ['React', 'Coffeescript', 'Webpack']
 
-rootApp = el app, state
+# ui = f(store)
+rootApp = el app, store
+
+# element = query(DOM)
 rootNode = document.getElementById 'app'
 
+# render ui into element
 rDOM.render rootApp, rootNode

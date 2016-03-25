@@ -1,6 +1,4 @@
 r = require 'react'
-
-component = r.createClass
 fac = r.createFactory
 el = r.createElement
 

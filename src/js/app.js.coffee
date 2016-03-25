@@ -2,8 +2,6 @@ r = require 'react'
 rDOM = require 'react-dom'
 app = require './components'
 
-el = r.createElement
-
 # store (db, state)
 store =
   selectedPerson: 3
@@ -30,7 +28,7 @@ store =
   ]
 
 # ui = f(store)
-rootApp = el app, store
+rootApp = app(store)
 
 # element = query(DOM)
 rootNode = document.getElementById 'app'

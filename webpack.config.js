@@ -1,5 +1,5 @@
 module.exports = {
-    entry: "./app.js.coffee",
+    entry: "./src/js/app.js.coffee",
     output: {
         path: __dirname,
         filename: "bundle.js"

@@ -26,6 +26,6 @@ person = (person) ->
 
 app = (props) ->
   div { className: 'app-root' },
-    person (props.person)
+    person (props.people[props.selectedPerson])
 
 module.exports = app

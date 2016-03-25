@@ -1,4 +1,3 @@
-r = require 'react'
 rDOM = require 'react-dom'
 app = require './components'
 store = require './store'

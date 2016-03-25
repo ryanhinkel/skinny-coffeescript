@@ -8,6 +8,7 @@ div = fac('div')
 span = fac('span')
 h1 = fac('h1')
 h2 = fac('h2')
+h3 = fac('h3')
 
 
 skill = (skill) ->
@@ -21,6 +22,7 @@ app = (props) ->
     div { className: 'person' },
       h2 { className: 'full-name' },
         fullName
+      h3 {}, "Skills"
       div {},
         person.skills.map skill
 

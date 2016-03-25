@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: monospace;
-  background-color: #bdf;
+  background-color: #759fdd;
 }
 
 h2 {
@@ -20,7 +20,6 @@ h3 {
 
 .person {
   background-color: #fff;
-  border-radius: 1.4em;
   padding: 1rem;
   font-size: 1rem;
 }
@@ -33,7 +32,7 @@ h3 {
   display: inline-block;
   margin: 0 .4em .4em 0;
   font-size: 1.2rem;
-  border: 1px solid #bdf;
+  border: 1px solid #66d31d;
   border-radius: 2rem;
   padding: .4rem 1rem;
 }

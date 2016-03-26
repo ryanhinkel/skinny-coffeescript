@@ -16,6 +16,6 @@ span = fac('span')
 
 app = (props) ->
   div { className: 'app-root' },
-    span {}, 'Cafe!'
+    span {}, '☕ Cafe!'
 
 module.exports = app

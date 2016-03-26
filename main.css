@@ -16,6 +16,8 @@ h3 {
 
 .app-root {
   padding: 2em;
+  color: #fff;
+  font-size: 3rem;
 }
 
 .person {

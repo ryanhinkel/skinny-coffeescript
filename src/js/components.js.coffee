@@ -44,8 +44,8 @@ v.index = (props) ->
     div { key: i, className: className },
       "#{person.firstName} #{person.lastName}"
 
-v.show = (person) ->
-  c.person person
+v.show = (props) ->
+  c.person props.people[props.selectedPerson]
 
 #
 # top level component

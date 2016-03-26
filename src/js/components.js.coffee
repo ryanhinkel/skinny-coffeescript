@@ -40,6 +40,7 @@ v = {}
 v.index = (props) ->
   selected = props.selectedPerson
   props.people.map (person, i) ->
+    # room for improvement
     className = if i is selected then 'block active' else 'block'
     div { key: i, className: className },
       "#{person.firstName} #{person.lastName}"
@@ -52,7 +53,6 @@ v.show = (props) ->
 
 app = (props) ->
   div { className: 'app-root' },
-    v.index props
-    # v.show (props.people[props.selectedPerson])
+    v[props.view] props
 
 module.exports = app

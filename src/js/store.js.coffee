@@ -1,6 +1,7 @@
 # store (db, state)
 module.exports = store =
-  selectedPerson: 3
+  view: 'index'
+  selectedPerson: 1
   people: [
     firstName: 'Ryan',
     lastName: 'Hinkel',

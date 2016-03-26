@@ -23,7 +23,7 @@ h3 {
   padding: 1rem;
   font-size: 1rem;
   margin-bottom: 1rem;
-  transition: all 0.5s cubic-bezier(1, 0.06, 0.05, 1)
+  transition: all 0.2s cubic-bezier(1, 0.06, 0.05, 1)
 }
 
 .block.active {

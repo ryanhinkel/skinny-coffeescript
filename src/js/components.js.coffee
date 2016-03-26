@@ -11,8 +11,9 @@ c.skill = (skill) ->
 
 c.person = (person) ->
   fullName = "#{person.firstName} #{person.lastName}"
+  close = () -> act('navigate', 'index')
 
-  div { className: 'person block' },
+  div { className: 'person block',  onClick: close },
     h2 { className: 'full-name' },
       fullName
     h3 {}, "Skills"
@@ -26,10 +27,18 @@ v = {}
 
 v.index = (props) ->
   selected = props.selectedPerson
+  select = (i) ->
+    () -> act('selectPerson', i)
+
+  open = (i) ->
+    () ->
+      act('selectPerson', i)
+      act('navigate', 'show')
+
   props.people.map (person, i) ->
-    # room for improvement
     className = if i is selected then 'block active' else 'block'
-    div { key: i, className: className },
+
+    div { key: i, className: className, onClick: select(i), onDoubleClick: open(i) },
       "#{person.firstName} #{person.lastName}"
 
 v.show = (props) ->

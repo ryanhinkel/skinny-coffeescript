@@ -16,12 +16,13 @@ h3 = fac('h3')
 #
 # components in their simplest
 # form are pure functions
+c = {}
 
-skill = (skill) ->
+c.skill = (skill) ->
   div { key: skill, className: 'skill' },
     skill
 
-person = (person) ->
+c.person = (person) ->
   fullName = "#{person.firstName} #{person.lastName}"
 
   div { className: 'person' },
@@ -29,13 +30,21 @@ person = (person) ->
       fullName
     h3 {}, "Skills"
     div {},
-      person.skills.map skill
+      person.skills.map c.skill
+
+#
+# views are high level
+# components
+v = {}
+
+v.show = (person) ->
+  c.person person
 
 #
 # top level component
 
 app = (props) ->
   div { className: 'app-root' },
-    person (props.people[props.selectedPerson])
+    v.show (props.people[props.selectedPerson])
 
 module.exports = app

@@ -3,14 +3,23 @@ app = require './components'
 store = require './store'
 connect = require './actions'
 
-# gui = f(store)
-gui = app(store.data)
+render = (data) ->
+  # gui = f(store)
+  gui = app(data)
 
-# element = query(DOM)
-element = document.getElementById 'app'
+  # element = query(DOM)
+  element = document.getElementById 'app'
 
-# render gui into element
-rDOM.render gui, element
+  # render gui into element
+  rDOM.render gui, element
+
+# update
+update = (data) ->
+  render data
+  store.data = data
 
 # actions
-window.act = connect(store, (result) -> result)
+window.act = connect(store, update)
+
+# inital render
+render(store.data)

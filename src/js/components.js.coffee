@@ -28,18 +28,24 @@ v = {}
 v.index = (props) ->
   selected = props.selectedPerson
   select = (i) ->
-    () -> act('selectPerson', i)
+    () ->
+      if(i is selected)
+        act('selectPerson', null)
+      else
+        act('selectPerson', i)
 
   open = (i) ->
     () ->
       act('selectPerson', i)
       act('navigate', 'show')
 
+
   props.people.map (person, i) ->
     className = if i is selected then 'block active' else 'block'
 
     div { key: i, className: className, onClick: select(i), onDoubleClick: open(i) },
-      "#{person.firstName} #{person.lastName}"
+      div { className: 'count' }, "#{person.skills.length} skills"
+      div { className: 'full-name' }, "#{person.firstName} #{person.lastName}"
 
 v.show = (props) ->
   c.person props.people[props.selectedPerson]

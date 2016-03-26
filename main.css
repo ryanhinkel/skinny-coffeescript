@@ -27,13 +27,41 @@ h3 {
 }
 
 .block.active {
-  transform: scale(1.02);
+  transform: scale(1.03);
   box-shadow: 0 0 2rem rgba(0,0,0,0.2);
-  padding: 2rem 1rem;
+  padding: 1rem;
 }
 
 .full-name {
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+.count {
+  opacity: 0;
+  color: #fff;
+  border-radius: 1rem;
+  padding: .3rem .7rem;
+  float: right;
+  transition: all 0.2s cubic-bezier(1, 0.06, 0.05, 1)
+}
+
+.active .count {
+  opacity: 1;
+  background-color: #66d31d;
+}
+
+.count {
+  opacity: 0;
+  color: #fff;
+  border-radius: 1rem;
+  padding: .3rem .7rem;
+  float: right;
+  transition: all 0.2s cubic-bezier(1, 0.06, 0.05, 1)
+}
+
+.active .count {
+  opacity: 1;
+  background-color: #66d31d;
 }
 
 .skill {

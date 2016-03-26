@@ -1,17 +1,4 @@
-r = require 'react'
-fac = r.createFactory
-el = r.createElement
-
-#
-# factories create functions
-# that return a single react
-# element
-
-div = fac('div')
-span = fac('span')
-h1 = fac('h1')
-h2 = fac('h2')
-h3 = fac('h3')
+{ div, h2, h3 } = require './elements'
 
 #
 # components in their simplest

@@ -18,10 +18,18 @@ h3 {
   padding: 2em;
 }
 
-.person {
+.block {
   background-color: #fff;
   padding: 1rem;
   font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.5s cubic-bezier(1, 0.06, 0.05, 1)
+}
+
+.block.active {
+  transform: scale(1.02);
+  box-shadow: 0 0 2rem rgba(0,0,0,0.2);
+  padding: 2rem 1rem;
 }
 
 .full-name {

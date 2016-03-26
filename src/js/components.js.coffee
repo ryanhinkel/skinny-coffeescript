@@ -25,7 +25,7 @@ c.skill = (skill) ->
 c.person = (person) ->
   fullName = "#{person.firstName} #{person.lastName}"
 
-  div { className: 'person' },
+  div { className: 'person block' },
     h2 { className: 'full-name' },
       fullName
     h3 {}, "Skills"
@@ -37,6 +37,13 @@ c.person = (person) ->
 # components
 v = {}
 
+v.index = (props) ->
+  selected = props.selectedPerson
+  props.people.map (person, i) ->
+    className = if i is selected then 'block active' else 'block'
+    div { key: i, className: className },
+      "#{person.firstName} #{person.lastName}"
+
 v.show = (person) ->
   c.person person
 
@@ -45,6 +52,7 @@ v.show = (person) ->
 
 app = (props) ->
   div { className: 'app-root' },
-    v.show (props.people[props.selectedPerson])
+    v.index props
+    # v.show (props.people[props.selectedPerson])
 
 module.exports = app

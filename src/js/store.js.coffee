@@ -1,7 +1,7 @@
 # store (db, state)
 module.exports = store =
   view: 'index'
-  selectedPerson: 1
+  selectedPerson: 0
   people: [
     firstName: 'Ryan',
     lastName: 'Hinkel',

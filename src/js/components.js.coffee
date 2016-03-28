@@ -42,7 +42,7 @@ v.index = (props) ->
   props.people.map (person, i) ->
     # room for improvement
     className = if i is selected then 'block active' else 'block'
-    div { key: i, className: className },
+    div { key: i, className: className, onClick: () => alert i},
       "#{person.firstName} #{person.lastName}"
 
 v.show = (props) ->

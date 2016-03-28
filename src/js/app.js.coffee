@@ -1,6 +1,7 @@
 rDOM = require 'react-dom'
 app = require './components'
-store = require './store'
+store =
+  message: '☕ Cafe!'
 
 # gui = f(store)
 gui = app(store)

@@ -1,5 +1,5 @@
 rDOM = require 'react-dom'
-server = require 'react-dom/server'
+rDOM.server = require 'react-dom/server'
 app = require './components'
 store = require './store'
 
@@ -13,4 +13,4 @@ element = document.getElementById 'app'
 rDOM.render gui, element
 
 # render gui into string
-console.log server.renderToStaticMarkup(gui)
+console.log rDOM.server.renderToStaticMarkup(gui)

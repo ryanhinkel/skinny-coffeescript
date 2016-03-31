@@ -1,12 +1,16 @@
-rDOM = require 'react-dom'
+{ render } = require 'react-dom'
+{ renderToStaticMarkup } = require 'react-dom/server'
 app = require './components'
 store = require './store'
 
-# gui = f(store)
+# app is a component is a function
 gui = app(store)
 
-# element = query(DOM)
+# element is a dom reference
 element = document.getElementById 'app'
 
-# render gui into element
-rDOM.render gui, element
+# render inserts the gui into the dom
+render gui, element
+
+# render gui into string
+console.log renderToStaticMarkup(gui)

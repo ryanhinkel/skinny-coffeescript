@@ -1,13 +1,15 @@
 { render } = require 'react-dom'
 app = require './components'
-store =
-  message: '☕ ⚛'
 
-# gui = f(store)
-gui = app(store)
+# store is where we keep state
+store = message: 'Cafe!'
 
-# element = query(DOM)
+# app is a component is a function
+gui = app store
+
+# element is a dom reference
 element = document.getElementById 'app'
 
-# render gui into element
+# render inserts the gui into the dom
 render gui, element
+

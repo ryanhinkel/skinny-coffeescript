@@ -1,4 +1,4 @@
-rDOM = require 'react-dom'
+{ render } = require 'react-dom'
 app = require './components'
 store =
   message: '☕ ⚛'
@@ -10,4 +10,4 @@ gui = app(store)
 element = document.getElementById 'app'
 
 # render gui into element
-rDOM.render gui, element
+render gui, element
